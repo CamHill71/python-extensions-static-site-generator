@@ -26,3 +26,10 @@ def written():
     """ """ 
     global total_written
     total_written = total_written + 1
+
+
+def stats():
+    """ """
+    final_time = start_time - time.time() 
+    
+
