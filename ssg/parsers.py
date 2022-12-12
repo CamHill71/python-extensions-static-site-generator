@@ -21,7 +21,7 @@ class Parser:
         content = Content.load(self.read(path))
         html = markdown(content.body)
         self.write(path, dest, html)
-        filtered = hooks.filter("generate_menu",html)
+        filtered = hooks.filter("generate_menu",html,self.base_ext)
         raise NotImplementedError
 
     def read(self, path):
