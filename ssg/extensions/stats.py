@@ -21,6 +21,7 @@ def start_build():
     global start_time
     start_time = time.time()
 
+@hooks.register("written")
 def written():
     """ """ 
     global total_written
