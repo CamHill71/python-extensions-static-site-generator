@@ -19,4 +19,4 @@ total_written = 0
 def start_build():
     """ """
     global start_time
-    start_time = time.localtime()
+    start_time = time.time()
