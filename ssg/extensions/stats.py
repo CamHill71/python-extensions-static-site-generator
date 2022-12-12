@@ -30,6 +30,6 @@ def written():
 @hooks.register("stats")
 def stats():
     """ """
-    final_time = start_time - time.time() 
+    final_time =  time.time()- start_time 
 
 
