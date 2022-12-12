@@ -20,9 +20,10 @@ class Parser:
     def parse(self, path: Path, source: Path, dest: Path):
         content = Content.load(self.read(path))
         html = markdown(content.body)
-        #self.write(path, dest, html)
+        self.write(path, dest, html)
         filtered = hooks.filter("generate_menu",html,self.base_ext)
-        raise NotImplementedError
+        self.write(path, dest, filtered)
+       
 
     def read(self, path):
         with open(path, "r") as file:
