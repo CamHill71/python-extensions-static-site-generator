@@ -25,4 +25,4 @@ def start_build():
 def written():
     """ """ 
     global total_written
-    total_written += 1
+    total_written = total_written + 1
