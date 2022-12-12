@@ -20,3 +20,8 @@ def start_build():
     """ """
     global start_time
     start_time = time.time()
+
+def written():
+    """ """ 
+    global total_written
+    total_written += 1
