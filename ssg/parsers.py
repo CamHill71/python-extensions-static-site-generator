@@ -21,11 +21,8 @@ class Parser:
         content = Content.load(self.read(path))
         html = markdown(content.body)
         self.write(path, dest, html)
-        filtered = hooks.filter("generate_menu", html, self.base_ext)
-        self.write(path, dest, filtered)
-        sys.stdout.write(
-            "\x1b[1;32m{} converted to HTML. Metadata: {}\n".format(path.name, content)
-        )
+        filtered = hooks.filter("generate_menu",html)
+        raise NotImplementedError
 
     def read(self, path):
         with open(path, "r") as file:
